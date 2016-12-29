@@ -1,0 +1,3 @@
+[submodule "matlab/spgl1"]
+	path = matlab/spgl1
+	url = https://github.com/mpf/spgl1.git
