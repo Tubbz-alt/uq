@@ -50,4 +50,15 @@ end
 
 tellapsed = toc(tstart)
 
-save(['kernel_dim' num2str(dim) '_P' num2str(poly_order) '.mat'], 'kernel');
+outstem = ['kernel_dim' num2str(dim) '_P' num2str(poly_order)];
+outmat = [outstem '.mat'];
+save(outmat, 'kernel')
+
+% Write out one column of the matrix for testing purposes
+for i = 1:dim
+    for j = 1:1
+        mat = full(kernel{i, j});
+        outtab = ['test-output/' outstem '_i' num2str(i) '_j' num2str(j) '.txt'];
+        save(outtab, 'mat', '-ascii', '-tabs')
+    end
+end

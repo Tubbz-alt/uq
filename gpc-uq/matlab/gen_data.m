@@ -25,3 +25,7 @@ for k = 1:num_sample
 end
 
 save('data.mat', 'input', 'output');
+
+% Write out inputs and outputs for testing  purposes
+save('test-output/input.txt', 'input', '-ascii', '-tabs')
+save('test-output/output.txt', 'output', '-ascii', '-tabs')
