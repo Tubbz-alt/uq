@@ -13,11 +13,16 @@ $ source venv/bin/activate
 Once you've set up your environment, you can install the gpc package and its dependencies with 
 
 ```
-(vanv) $ pip install --editable .
+(venv) $ pip install --editable .
 ```
 
-The ```--editable``` flag allows you to make changes to the library as you are using it.
-However, sometimes you need to completely start over.
+Try running the tests/examples with:
+
+```
+(venv) $ python -m unittest -v
+```
+
+Sometimes (if you are like the person writing these instructions) you will need to completely start over with a clean environment.
 You can do this by uninstalling the gpc module
 
 ```
